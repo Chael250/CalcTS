@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Web site created using create-snowpack-app" />
-    <link rel="stylesheet" type="text/css" href="/index.css" />
-    <title>Snowpack App</title>
-  </head>
-  <body>
-    <img id="img" src="/logo.svg" />
-    <canvas id="canvas"></canvas>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type="module" src="/dist/index.js"></script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalcTS</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="calculator">
+    <div class="calculator-container">
+      <div class="input-container">
+        <input type="text" class="calculator-input">
+      </div>
+      <div class="special-character-container">
+        <div class="square-root" id="square-root">&radic;</div>
+        <div class="pi" id="pi">&pi;</div>
+        <div class="power" id="power">&#94;</div>
+        <div class="not" id="not">&excl;</div>
+      </div>
+      <div class="button-container">
+        <div class="row">
+          <div class="column column1">AC</div>
+          <div class="column last">( )</div>
+          <div class="column last" id="modulus">%</div>
+          <div class="column last" id="divide">&divide;</div>
+        </div>
+        <div class="row">
+          <div class="column">7</div>
+          <div class="column">8</div>
+          <div class="column">9</div>
+          <div class="column last" id="multiply">X</div>
+        </div>
+        <div class="row">
+          <div class="column">4</div>
+          <div class="column">5</div>
+          <div class="column">6</div>
+          <div class="column last" id="subtract">-</div>
+        </div>
+        <div class="row">
+          <div class="column">1</div>
+          <div class="column">2</div>
+          <div class="column">3</div>
+          <div class="column last" id="add">+</div>
+        </div>
+        <div class="row">
+          <div class="column">0</div>
+          <div class="column">.</div>
+          <div class="column" id="delete">DEL</div>
+          <div class="column last" id="equal">=</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <div class="footer-container">
+    <div class="footer-logo">
+      <p 
+      data-text="CalcTS"
+      >CalcTS</p>
+    </div>
+    <div class="footer-credentials">
+      <p>&copy; ganzac784@gmail.com</p>
+    </div>
+  </div>
+
+  <script src="dist/index.js" type="module"></script>
+</body>
 </html>
